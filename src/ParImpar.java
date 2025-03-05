@@ -1,25 +1,24 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class ParImpar {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(0);
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        int evenCount = 0;
+        int oddCount = 0;
 
-        for(int i = 0; i < numbers.size(); i++) {
-            System.out.println("Escribe un numero: ");
-            int number = scanner.nextInt();
-
+        for (int number : numbers) {
             if (number % 2 == 0) {
-                System.out.println("El numero " + number + " es par, continuamos");
-                numbers.add(number);
+                System.out.println("El numero " + number + " es par");
+                evenCount++;
             } else {
-                System.out.println("El numero " + number + " es impar, procedemos a salir");
-                break;
+                System.out.println("El numero " + number + " es impar");
+                oddCount++;
             }
-            numbers.add(number);
         }
+
+        System.out.println("Cantidad de numeros pares: " + evenCount);
+        System.out.println("Cantidad de numeros impares: " + oddCount);
     }
 }
