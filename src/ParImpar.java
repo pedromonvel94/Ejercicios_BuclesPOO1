@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class ParImpar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(0);
+        List<Long> numbers = new ArrayList<>();
+        numbers.add(0L);//Como estamos usando un tipo de dato Long en el ArrayList, para datos o numeros muy grandes, entonces debemos colocar la L al final del entero para convertirlo en tipo Long
 
         for(int i = 0; i < numbers.size(); i++) {
             System.out.println("Escribe un numero: ");
-            int number = scanner.nextInt();
+            long number = scanner.nextLong(); //Para leer un numero entero largo
 
             if (number % 2 == 0) {
                 System.out.println("El numero " + number + " es par, continuamos");
